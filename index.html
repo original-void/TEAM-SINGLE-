@@ -13,25 +13,25 @@
     :root { --gold: #D4AF37; --black: #0A0A0A; --red: #8B0000; }
     * { box-sizing: border-box; }
     body { font-family: 'Montserrat'; background: var(--black); color: var(--gold); padding: 15px; max-width: 650px; margin: auto; }
- .royal-card { background: #111; padding: 25px; border-radius: 15px; border: 2px solid var(--gold); margin-bottom: 20px; }
+.royal-card { background: #111; padding: 25px; border-radius: 15px; border: 2px solid var(--gold); margin-bottom: 20px; }
     h1 { font-family: 'Cinzel'; text-align: center; font-size: 28px; margin: 10px 0; }
- .crown-main { font-size: 50px; text-align: center; }
+.crown-main { font-size: 50px; text-align: center; }
     input, button { width: 100%; padding: 14px; margin: 8px 0; border-radius: 8px; border: 1px solid var(--gold); background: #222; color: white; font-size: 14px; }
     button { background: var(--gold); color: var(--black); font-weight: 700; cursor: pointer; }
     button:disabled { opacity: 0.5; cursor: not-allowed; }
- .hidden { display: none; }
- .flex { display: flex; gap: 20px; align-items: flex-start; }
- .photo-frame { width: 90px; height: 110px; border: 3px solid var(--gold); background: #000; object-fit: cover; }
- .stats { text-align: center; font-size: 14px; margin: 10px 0; color: #B8941F; }
+.hidden { display: none; }
+.flex { display: flex; gap: 20px; align-items: flex-start; }
+.photo-frame { width: 90px; height: 110px; border: 3px solid var(--gold); background: #000; object-fit: cover; }
+.stats { text-align: center; font-size: 14px; margin: 10px 0; color: #B8941F; }
     table { width: 100%; font-size: 11px; border-collapse: collapse; margin-top: 15px; }
     td, th { border: 1px solid #B8941F; padding: 8px; text-align: left; }
- .admin-btn { background: var(--red); padding: 6px; font-size: 11px; }
- .preview { width: 60px; height: 60px; border: 1px solid var(--gold); object-fit: cover; margin: 5px 0; }
- .btn-group { display: flex; gap: 10px; }
- .btn-group button { flex: 1; }
- .status-msg { text-align: center; font-size: 12px; color: #00FF00; margin: 10px 0; }
+.admin-btn { background: var(--red); padding: 6px; font-size: 11px; }
+.preview { width: 60px; height: 60px; border: 1px solid var(--gold); object-fit: cover; margin: 5px 0; }
+.btn-group { display: flex; gap: 10px; }
+.btn-group button { flex: 1; }
+.status-msg { text-align: center; font-size: 12px; color: #00FF00; margin: 10px 0; }
     #errorBox { background: #330000; border: 1px solid red; padding: 10px; margin: 10px 0; font-size: 11px; color: #FF6666; border-radius: 8px; }
- .note { font-size: 10px; color: #B8941F; text-align: center; margin-top: 5px; }
+.note { font-size: 10px; color: #B8941F; text-align: center; margin-top: 5px; }
 </style>
 </head>
 <body>
@@ -89,13 +89,13 @@
 
 <script>
   const firebaseConfig = {
-    apiKey: "AIzaSyAmXKbyLJmf2IU1hS8RI0uAE5LWgkAvovI",
-    authDomain: "single-empire.firebaseapp.com",
-    databaseURL: "https://single-empire-default-rtdb.firebaseio.com",
-    projectId: "single-empire",
-    storageBucket: "single-empire.firebasestorage.app",
-    messagingSenderId: "719163390473",
-    appId: "1:719163390473:web:857798e381fb16456616d8"
+    apiKey: "AIzaSyCLYTxgmlbK3BDj4f5jsDfCdf4fWgvH970",
+    authDomain: "junior-ai-16d67.firebaseapp.com",
+    databaseURL: "https://junior-ai-16d67-default-rtdb.firebaseio.com",
+    projectId: "junior-ai-16d67",
+    storageBucket: "junior-ai-16d67.firebasestorage.app",
+    messagingSenderId: "72011020223",
+    appId: "1:72011020223:web:ad988a6bae0454070f130a"
   };
 
   firebase.initializeApp(firebaseConfig);
@@ -104,7 +104,6 @@
   let currentPassport = null;
   let citizenCount = 0;
   let currentPhotoDataUrl = '';
-  const ROYAL_SIGNATURE = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMjAwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xMCA0MEMyMCAzMCAzNSAzNSA0NSA0MEM1NSA0NSA3MCA0MCA4MCA0NUM5MCA1MCAxMDUgNDUgMTE1IDUwQzEyNSA1NSAxNDAgNDUgMTUwIDQ1QzE2MCA0NSAxNzUgMzUgMTkwIDQwIiBzdHJva2U9IiNENEFGMzciIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iMTAwIiB5PSI2NSIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXN0eWxlPSJpdGFsaWMiIGZpbGw9IiNENEFGMzciIHRleHQtYW5jaG9yPSJtaWRkbGUiPktpbmcgU21va2llPC90ZXh0Pjwvc3ZnPg==';
 
   window.addEventListener('load', () => loadCitizenCount());
 
@@ -159,10 +158,11 @@
     document.getElementById('claimBtn').innerText = 'PROCESSING... ⏳';
     document.getElementById('claimBtn').disabled = true;
 
-    db.ref('citizens').once('value').then(snap => {
+    db.ref('citizens').once('value')
+ .then(snap => {
         let maxNum = 0;
         snap.forEach(child => {
-          const num = parseInt(child.val().no.replace('TSE', ''));
+          const num = parseInt((child.val().no || '').replace('TSE', '')) || 0;
           if (num > maxNum) maxNum = num;
         });
         const nextNum = maxNum + 1;
@@ -175,7 +175,8 @@
         };
 
         return db.ref('citizens/' + passportNo).set(citizen).then(() => citizen);
-      }).then(citizen => {
+      })
+ .then(citizen => {
         currentPassport = citizen;
         document.getElementById('formDiv').classList.add('hidden');
         document.getElementById('passportDiv').classList.remove('hidden');
@@ -184,7 +185,8 @@
         document.getElementById('passEmbassy').innerText = citizen.embassy.toUpperCase();
         document.getElementById('passOshwa').innerText = citizen.oshwa;
         document.getElementById('pichaYangu').src = currentPhotoDataUrl || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iMTEwIiB2aWV3Qm94PSIwIDAgOTAgaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSI5MCIgaGVpZ2h0PSIxMTAiIGZpbGw9IiMwMDAiLz48dGV4dCB4PSI0NSIgeT0iNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMCIgZmlsbD0iI0Q0QUYzNyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Tk8gUEhPVE88L3RleHQ+PC9zdmc+';
-      }).catch(err => {
+      })
+ .catch(err => {
         showError(err.message);
         document.getElementById('claimBtn').innerText = '👑 CLAIM CITIZENSHIP 👑';
         document.getElementById('claimBtn').disabled = false;
@@ -198,7 +200,7 @@
     document.querySelector('button[onclick="downloadPDF()"]').disabled = true;
 
     try {
-      const { jsPDF } = window.jspdf; // FIX: sahihi import
+      const { jsPDF } = window.jspdf;
       const doc = new jsPDF();
       const pageW = doc.internal.pageSize.getWidth();
       const pageH = doc.internal.pageSize.getHeight();
@@ -219,7 +221,7 @@
       if (currentPhotoDataUrl) {
         try {
             doc.addImage(currentPhotoDataUrl, 'JPEG', 128, 83, 59, 79);
-        } catch(e) { console.log('Photo error:', e); }
+        } catch(e) {}
       }
 
       doc.setTextColor(212, 175, 55);
@@ -317,4 +319,4 @@
   }
 </script>
 </body>
-  </html>
+</html>
